@@ -10,7 +10,7 @@
 import * as React from 'react';
 
 export type Display = 'true' | 'false' | 'excluded';
-export type SortDirection = 'asc' | 'desc';
+export type SortDirection = 'asc' | 'desc' | 'none';
 export type FilterType = 'dropdown' | 'checkbox' | 'multiselect' | 'textField' | 'custom';
 export type Responsive = 'stacked' | 'scrollMaxHeight' | 'scrollFullHeight';
 export type SelectableRows = 'multiple' | 'single' | 'none';
@@ -26,7 +26,8 @@ interface MUIDataTableStateRows {
 }
 
 export interface MUIDataTableState {
-    activeColumn: string | null;
+    activeColumn: number | null;
+    order?: SortDirection;
     announceText: string | null;
     columns: MUIDataTableColumnState[];
     count: number;
