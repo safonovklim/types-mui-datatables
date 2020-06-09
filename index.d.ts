@@ -156,6 +156,7 @@ export interface MUIDataTableIsRowCheck {
 export interface MUIDataTableOptions {
     caseSensitive?: boolean;
     count?: number;
+    forcedPageNumber?: number;
     customFilterDialogFooter?: (filterList: any[]) => React.ReactNode;
     customFooter?: (
         rowCount: number,
